@@ -10,9 +10,9 @@ import retrofit2.http.Query
 @Service
 interface MarvelHttpService {
 
-    @GET("/characters")
+    @GET("characters")
     suspend fun getCharacters(
-        @Query("ts") ts: String,
+        @Query("ts") ts: Long,
         @Query("apikey") apiKey: String,
         @Query("hash") hash: String,
     ): Response<CharacterWrapper>
