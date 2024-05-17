@@ -16,5 +16,5 @@ class MarvelController(
 ) {
     @GetMapping
     suspend fun findCharacters(
-    ) = withContext(Dispatchers.IO) { characterService.listCharacters() }
+    ) = withContext (Dispatchers.IO) { characterService.listCharacters() }
 }
